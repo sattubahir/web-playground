@@ -49,7 +49,63 @@
     .nav-links a:hover { color: #818cf8; }
     .nav-links a:hover::after { width: 100%; }
     main { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem 4rem; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 2.5rem;
+      align-items: center;
+      min-height: 70vh;
+      padding-top: 30px;
+    }
+    .greeting { color: #6366f1; font-weight: 600; margin-bottom: 0.4rem; font-size: 1.1rem; }
+    .name {
+      font-size: 3.2rem; font-weight: 800; margin-bottom: 0.4rem;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .title { font-size: 1.3rem; color: #94a3b8; margin-bottom: 1rem; }
+    .summary {
+      color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin-bottom: 1.4rem;
+      max-width: 70ch;
+    }
+    .profile-actions { display:flex; gap: 1rem; margin-bottom: 1.4rem; flex-wrap:wrap; }
+    .btn {
+      padding: 12px 28px; border-radius: 999px; text-decoration: none; font-weight: 600;
+      display: inline-block; transition: all 0.25s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(99,102,241,0.4); }
+    .btn-outline {
+      border: 2px solid #6366f1; color: #f1f5f9; background: transparent;
+    }
+    .hero-meta { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom: 0.8rem;}
+    .meta-item { background:#0f172a; padding:10px 14px; border-radius:12px; border:2px solid #334155; display:flex; gap:10px; align-items:center;}
+    .meta-item strong { color:#cbd5e1; display:block; font-size:0.95rem; }
+    .meta-item span { color:#94a3b8; font-size:0.85rem; }
+    .profile-card {
+      width: 350px; height: 350px; border-radius: 50%;
+      background: linear-gradient(135deg,#6366f1,#8b5cf6);
+      display:flex; align-items:center; justify-content:center; box-shadow:0 30px 80px rgba(99,102,241,0.35);
+    }
+    .profile-card i { font-size: 130px; color: rgba(255,255,255,0.28); }
+    .grid-2 { display:grid; grid-template-columns: 1fr 360px; gap:2rem; align-items: start; }
+    .card {
+      background: #0f172a; padding: 1.2rem; border-radius: 12px; border: 2px solid #334155;
+      transition: all 0.25s;
+    }
+    .card:hover { transform: translateY(-6px); border-color: #6366f1; box-shadow: 0 20px 50px rgba(99,102,241,0.18); }
+    .section-title { font-size: 2rem; color: #e6eef9; margin-bottom: 0.6rem; }
+    .underline { width: 90px; height: 4px; background: linear-gradient(90deg,#6366f1,#8b5cf6); border-radius:2px; margin-bottom:1rem; }
+    .contact-list { display:flex; flex-direction:column; gap:0.6rem; margin-top:0.6rem; }
+    .contact-list a { color:#cbd5e1; text-decoration:none; }
+    .contact-list a:hover { color:#818cf8; }
     @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align:center; gap:1.2rem; }
+      .profile-card { width:260px; height:260px; margin:0 auto; }
+      .grid-2 { grid-template-columns: 1fr; }
       .nav-container { padding: 0 1rem; }
       .nav-links { gap: 1rem; }
     }
@@ -72,11 +128,71 @@
   </nav>
 
   <main>
-    <section id="home" class="hero" aria-labelledby="profile-heading"></section>
-    <section class="grid-2" aria-labelledby="profile-details"></section>
+    <section id="home" class="hero" aria-labelledby="profile-heading">
+      <div>
+        <p class="greeting">Hello — I'm</p>
+        <h1 id="profile-heading" class="name">Satyajit Bahir</h1>
+        <p class="title">Full Stack Developer — Java | Firebase | MySQL</p>
+        <p class="summary">
+          Versatile full-stack developer with practical experience building and deploying web applications using Java,
+          JDBC, Hibernate, HTML, CSS, JavaScript and Firebase. I focus on writing clean backend code, designing reliable
+          database interactions, and shipping features that solve real user problems. Open to full-time roles and freelance collaborations.
+        </p>
+
+        <div class="profile-actions">
+          <a class="btn btn-primary" href="#contact">Hire Me</a>
+          <a class="btn btn-outline" href="#" download="Satyajit-Bahir-Resume.pdf">Download CV</a>
+        </div>
+
+        <div class="hero-meta" aria-hidden="false">
+          <div class="meta-item">
+            <div>
+              <strong>Location</strong>
+              <span>India</span>
+            </div>
+          </div>
+          <div class="meta-item">
+            <div>
+              <strong>Experience</strong>
+              <span>Internship + Projects</span>
+            </div>
+          </div>
+          <div class="meta-item">
+            <div>
+              <strong>Availability</strong>
+              <span>Open to opportunities</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:8px;">
+          <div class="social-icons" style="display:flex; gap:10px;">
+            <a href="mailto:sattu3003@gmail.com" aria-label="Email" style="display:inline-flex; align-items:center; gap:8px; padding:8px 12px; background:#0f172a; border-radius:8px; border:1px solid #334155; color:#cbd5e1; text-decoration:none;">
+              <i class="fas fa-envelope"></i> sattu3003@gmail.com
+            </a>
+            <a href="tel:+918530037919" aria-label="Phone" style="display:inline-flex; align-items:center; gap:8px; padding:8px 12px; background:#0f172a; border-radius:8px; border:1px solid #334155; color:#cbd5e1; text-decoration:none;">
+              <i class="fas fa-phone"></i> +91-8530037919
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <aside aria-labelledby="avatar" style="display:flex; align-items:center; justify-content:center;">
+        <div class="profile-card" role="img" aria-label="Profile avatar placeholder">
+          <i class="fas fa-user"></i>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid-2" aria-labelledby="profile-details">
+      <div></div>
+      <aside></aside>
+    </section>
+
     <section id="contact" class="card" style="margin-top:1rem;"></section>
+
     <footer>
-      <div>&copy; 2025 Satyajit Bahir —  Available for opportunities</div>
+      <div>&copy; 2025 Satyajit Bahir —Available for opportunities</div>
     </footer>
   </main>
 </body>
