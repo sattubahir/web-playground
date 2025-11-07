@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Satyajit Bahir - Full Stack Developer Profile" />
+  <meta name="author" content="Satyajit Bahir" />
+  <title>Satyajit Bahir | Full Stack Developer — Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #f1f5f9;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      z-index: 1000;
+      border-bottom: 2px solid #334155;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo h2 { font-size: 1.6rem; font-weight: 700; color: #f1f5f9; }
+    .logo .dot { color: #6366f1; font-size: 1.9rem; }
+    .nav-links { display: flex; list-style: none; gap: 1.6rem; }
+    .nav-links a {
+      color: #f1f5f9; text-decoration: none; font-weight: 500; position: relative;
+      transition: color 0.25s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px;
+      background: #6366f1; transition: width 0.25s;
+    }
+    .nav-links a:hover { color: #818cf8; }
+    .nav-links a:hover::after { width: 100%; }
+    main { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem 4rem; }
+    @media (max-width: 900px) {
+      .nav-container { padding: 0 1rem; }
+      .nav-links { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo"><h2>Satyajit Bahir<span class="dot"></span></h2></div>
+      <ul class="nav-links" role="menubar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Profile</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero" aria-labelledby="profile-heading"></section>
+    <section class="grid-2" aria-labelledby="profile-details"></section>
+    <section id="contact" class="card" style="margin-top:1rem;"></section>
+    <footer>
+      <div>&copy; 2025 Satyajit Bahir —  Available for opportunities</div>
+    </footer>
+  </main>
+</body>
+</html>
