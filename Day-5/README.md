@@ -35,4 +35,4 @@ This profile highlights practical experience with the following technologies:
 * **Structured Content:** Clear use of semantic HTML (`<nav>`, `<section>`, `<aside>`) and well-defined CSS classes for organization.
 * **Dark Theme UI:** A professional, modern aesthetic utilizing a dark background with vibrant accents (`#6366f1`).
 
-
+## Profile Url: https://sattubahir.github.io/web-playground/
