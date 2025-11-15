@@ -377,7 +377,6 @@
       font-size: 18px;
     }
 
-
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -410,21 +409,6 @@
       flex: 0 0 auto;
       width: 20px;
       text-align: center;
-    }
-
-    @media (max-width: 520px) {
-      .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 0.45rem;
-      }
-
-      .skill-chip {
-        padding: 8px;
-        font-size: 0.85rem;
-        white-space: normal;
-      }
-
-      /* allow wrap on very narrow screens */
     }
 
     .projects-grid {
@@ -485,17 +469,36 @@
       border-top: 1px solid #213045;
     }
 
+    /* ========== RESPONSIVE DESIGN ========== */
+
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 1.2rem;
+        gap: 1.5rem;
+        padding-top: 20px;
       }
 
       .profile-card {
         width: 260px;
         height: 260px;
         margin: 0 auto;
+      }
+
+      .profile-card i {
+        font-size: 100px;
+      }
+
+      .name {
+        font-size: 2.5rem;
+      }
+
+      .title {
+        font-size: 1.1rem;
+      }
+
+      .summary {
+        max-width: 100%;
       }
 
       .grid-2 {
@@ -506,20 +509,274 @@
         grid-template-columns: 1fr;
       }
 
-      .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .projects-grid {
+        grid-template-columns: 1fr;
       }
 
-      .projects-grid {
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
       .nav-container {
         padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
       }
 
       .nav-links {
-        gap: 1rem;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+
+      main {
+        padding: 5rem 1rem 2rem;
+      }
+
+      .hero-meta {
+        justify-content: center;
+      }
+
+      .profile-actions {
+        justify-content: center;
+      }
+
+      .stats {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .name {
+        font-size: 2.2rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+      }
+
+      .social-icons {
+        flex-direction: column;
+        gap: 8px !important;
+      }
+
+      .social-icons a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 0.8rem 0;
+      }
+
+      .logo h2 {
+        font-size: 1.3rem;
+      }
+
+      .nav-links {
+        font-size: 0.85rem;
+        gap: 0.5rem;
+      }
+
+      .name {
+        font-size: 1.8rem;
+      }
+
+      .title {
+        font-size: 1rem;
+      }
+
+      .greeting {
+        font-size: 1rem;
+      }
+
+      .summary {
+        font-size: 0.95rem;
+      }
+
+      .profile-card {
+        width: 220px;
+        height: 220px;
+      }
+
+      .profile-card i {
+        font-size: 80px;
+      }
+
+      main {
+        padding: 4rem 1rem 2rem;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .hero-meta {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .meta-item {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .profile-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat {
+        min-width: auto;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+      }
+
+      .skill-chip {
+        padding: 8px;
+        font-size: 0.85rem;
+      }
+
+      .edu-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .exp-item {
+        padding: 0.8rem;
+      }
+
+      .tech-badges {
+        justify-content: center;
+      }
+
+      .projects-grid {
+        gap: 0.8rem;
+      }
+
+      .project-card,
+      .pub-card,
+      .contact-card {
+        padding: 0.9rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.45rem;
+      }
+
+      .skill-chip {
+        padding: 8px;
+        font-size: 0.85rem;
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .name {
+        font-size: 1.6rem;
+      }
+
+      .logo h2 {
+        font-size: 1.1rem;
+      }
+
+      .nav-links {
+        gap: 0.4rem;
+      }
+
+      .nav-links a {
+        font-size: 0.75rem;
+        padding: 4px;
+      }
+
+      .profile-card {
+        width: 180px;
+        height: 180px;
+      }
+
+      .profile-card i {
+        font-size: 60px;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat h3 {
+        font-size: 1.4rem;
+      }
+
+      input,
+      textarea,
+      button {
+        font-size: 16px !important;
+      }
+    }
+
+    @media (max-width: 900px) and (orientation: landscape) {
+      .hero {
+        min-height: auto;
+        padding-top: 10px;
+      }
+
+      .profile-card {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .cursor {
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      51%,
+      100% {
+        opacity: 0;
       }
     }
   </style>
@@ -544,12 +801,12 @@
   </nav>
 
   <main>
-    <!-- PROFILE / HERO SECTION -->
     <section id="home" class="hero" aria-labelledby="profile-heading">
       <div>
         <p class="greeting">Hello — I'm</p>
         <h1 id="profile-heading" class="name">Satyajit Bahir</h1>
-        <p class="title">Full Stack Developer — Java | Firebase | MySQL</p>
+        <!-- <p class="title">Full Stack Developer — Java | Firebase | MySQL</p> -->
+        <p class="title">Full Stack Developer — <span id="typedText"></span><span class="cursor">|</span></p>
         <p class="summary">
           Versatile full-stack developer with practical experience building and deploying web applications using Java,
           JDBC, Hibernate, HTML, CSS, JavaScript and Firebase. I focus on writing clean backend code, designing reliable
@@ -559,7 +816,8 @@
 
         <div class="profile-actions">
           <a class="btn btn-primary" href="#contact">Hire Me</a>
-          <a class="btn btn-outline" href="#" download="Satyajit-Bahir-Resume.pdf">Download CV</a>
+          <a class="btn btn-outline" href="/Day-5/assests/Satyajit_R_bahir_cv.pdf"
+            download="Satyajit-Bahir-Resume.pdf">Download CV</a>
         </div>
 
         <div class="hero-meta" aria-hidden="false">
@@ -596,10 +854,10 @@
           </div>
         </div>
       </div>
-      <!-- Profile Image -->
+
       <aside aria-labelledby="avatar" style="display:flex; align-items:center; justify-content:center;">
         <div class="profile-card" role="img" aria-label="Profile avatar">
-          <img src="img.jpg" alt="Satyajit Bahir" />
+          <img src="/Day-5/assests/img.jpg" alt="Satyajit Bahir" />
         </div>
       </aside>
     </section>
@@ -655,15 +913,15 @@
             </div>
           </div>
         </div>
-        <!-- Projects Section -->
+
         <div class="card" id="projects" style="margin-top:1rem;">
-          <h2 class="section-title"> Projects</h2>
+          <h2 class="section-title">Projects</h2>
           <div class="underline" aria-hidden="true"></div>
 
           <div class="projects-grid">
             <div class="project-card">
               <h4>Cerebral Neoplasm Detection From MRI using CNN</h4>
-              <div class="project-meta">Jul 2024 ·Python,Deep Learning </div>
+              <div class="project-meta">Jul 2024 · Python, Deep Learning</div>
               <p style="color:#cbd5e1; font-size:0.92rem;">
                 Cerebral Neoplasm detection system using CNN for MRI image classification, integrated with a Flask web
                 app for real-time prediction and display.
@@ -687,7 +945,7 @@
             </div>
           </div>
         </div>
-        <!-- PUblication -->
+
         <div class="card" id="publication" style="margin-top:1rem;">
           <h2 class="section-title">Publication</h2>
           <div class="underline" aria-hidden="true"></div>
@@ -747,6 +1005,7 @@
                 </a>
               </div>
             </div>
+
             <div style="margin-top:12px;">
               <h3 style="color:#e6eef9; margin-bottom:8px;">Current Focus</h3>
               <p style="color:#cbd5e1; font-size:0.95rem;">Backend Java roles, Full-stack positions using Firebase, and
@@ -814,59 +1073,102 @@
               <div class="skill-chip"><i class="fab fa-github" style="width:18px;"></i> GitHub</div>
             </div>
           </div>
+        </div>
       </aside>
     </section>
 
     <section id="contact" class="card" style="margin-top:1rem;">
       <h2 class="section-title">Get In Touch</h2>
       <div class="underline" aria-hidden="true"></div>
-      <p style="color:#cbd5e1; margin-bottom:12px;">I'm open to full-time roles, internships, and freelance work. Reach
-        out to discuss collaborations or to request my resume and references.</p>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <i class="fas fa-envelope" style="font-size:20px; color:#6366f1;"></i>
-          <div>
-            <strong style="display:block; color:#cbd5e1;">Email</strong>
-            <a href="mailto:sattu3003@gmail.com">sattu3003@gmail.com</a>
-          </div>
+      <p style="color:#cbd5e1; margin-bottom:12px;">
+        I'm open to full-time roles, internships, and freelance projects.
+        Send me a message and I'll get back to you soon.
+      </p>
+
+      <form onsubmit="return submitForm(this)" style="display:flex; flex-direction:column; gap:1rem; margin-top:1rem;">
+        <div style="display:flex; flex-direction:column; gap:0.3rem;">
+          <label style="color:#e2e8f0;">Your Name</label>
+          <input name="name" required placeholder="Enter your name" style="padding:12px; border-radius:10px; border:1px solid #334155;
+                    background:#0f172a; color:#cbd5e1;">
         </div>
 
-        <div class="contact-card">
-          <i class="fas fa-phone" style="font-size:20px; color:#6366f1;"></i>
-          <div>
-            <strong style="display:block; color:#cbd5e1;">Phone</strong>
-            <a href="tel:+918530037919">+91-8530037919</a>
-          </div>
+        <div style="display:flex; flex-direction:column; gap:0.3rem;">
+          <label style="color:#e2e8f0;">Email Address</label>
+          <input name="email" type="email" required placeholder="Enter your email" style="padding:12px; border-radius:10px; border:1px solid #334155;
+                    background:#0f172a; color:#cbd5e1;">
         </div>
 
-        <div class="contact-card">
-          <i class="fab fa-linkedin" style="font-size:20px; color:#6366f1;"></i>
-          <div>
-            <strong style="display:block; color:#cbd5e1;">LinkedIn</strong>
-            <a href="https://www.linkedin.com/in/satyajit-bahir-21a052207" target="_blank" rel="noopener noreferrer"
-              style="color:#818cf8; text-decoration:none;">
-              Connect with me
-            </a>
-          </div>
+        <div style="display:flex; flex-direction:column; gap:0.3rem;">
+          <label style="color:#e2e8f0;">Message</label>
+          <textarea name="message" rows="4" required placeholder="Write your message..." style="padding:12px; border-radius:10px; border:1px solid #334155;
+                       background:#0f172a; color:#cbd5e1;"></textarea>
         </div>
 
-        <div class="contact-card">
-          <i class="fab fa-github" style="font-size:20px; color:#6366f1;"></i>
-          <div>
-            <strong style="display:block; color:#cbd5e1;">GitHub</strong>
-            <a href="https://github.com/sattubahir" target="_blank" rel="noopener noreferrer"
-              style="color:#818cf8; text-decoration:none;">
-              View my repos
-            </a>
-          </div>
-        </div>
+        <button type="submit" style="padding:12px; border-radius:10px;
+               background:linear-gradient(135deg,#6366f1,#8b5cf6);
+               color:white; font-weight:600; cursor:pointer;
+               border:none; transition:0.25s; font-size:16px;">
+          Send Message
+        </button>
+
+
+        <p id="success" style="display:none; color:#81a3ff; margin-top:6px;">
+          ✅ Your message has been sent!
+        </p>
+      </form>
     </section>
+
 
     <footer>
       <div>&copy; 2025 Satyajit Bahir — Available for opportunities</div>
     </footer>
   </main>
+
+  <script>
+    function submitForm(form) {
+      const data = Object.fromEntries(new FormData(form).entries());
+      console.log("Form submitted:", data);
+
+      const msg = form.querySelector('#success');
+      msg.style.display = "block";
+
+      form.reset();
+      return false;
+    }
+    // Typing animation
+    const textArray = ['Java', 'Firebase', 'MySQL', 'JavaScript', 'HTML/CSS'];
+    let textIndex = 0;
+    let charIndex = 0;
+    const typedTextElement = document.getElementById('typedText');
+
+    function type() {
+      if (charIndex < textArray[textIndex].length) {
+        typedTextElement.textContent += textArray[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typedTextElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 50);
+      } else {
+        textIndex = (textIndex + 1) % textArray.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    // Start typing animation when page loads
+    window.addEventListener('load', () => {
+      setTimeout(type, 1000);
+    });
+
+  </script>
 </body>
 
 </html>
